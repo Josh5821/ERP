@@ -1,0 +1,103 @@
+
+/* Main payment page */
+.purchase-payment-container {
+    padding: 24px;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+/* Page heading */
+.purchase-payment-container h2 {
+    color: #212529;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+/* Table wrapper */
+.purchase-payment-container .table-responsive {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+}
+
+/* Payment table */
+.purchase-payment-container .table {
+    margin-bottom: 0;
+    min-width: 950px;
+}
+
+/* Table headers */
+.purchase-payment-container .table thead th {
+    padding: 14px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/* Table cells */
+.purchase-payment-container .table tbody td {
+    padding: 12px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* Form inputs */
+.purchase-payment-container .form-control,
+.purchase-payment-container .form-select {
+    min-width: 130px;
+    padding: 8px 10px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Input focus */
+.purchase-payment-container .form-control:focus,
+.purchase-payment-container .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+/* Action buttons */
+.purchase-payment-container .btn {
+    white-space: nowrap;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.purchase-payment-container .btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Alert messages */
+.purchase-payment-container .alert {
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Empty table message */
+.purchase-payment-container .table tbody td[colspan] {
+    padding: 24px;
+    color: #6c757d;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .purchase-payment-container {
+        padding: 14px;
+        margin-top: 12px;
+    }
+
+    .purchase-payment-container h2 {
+        font-size: 22px;
+    }
+
+    .purchase-payment-container .table thead th,
+    .purchase-payment-container .table tbody td {
+        padding: 9px;
+    }
+}

@@ -1,0 +1,194 @@
+
+.invoice-paper {
+  background: white;
+  color: #222;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.invoice-header p,
+.invoice-section p {
+  margin-bottom: 5px;
+}
+
+.invoice-title {
+  text-align: right;
+}
+
+.invoice-title h1 {
+  font-size: 24px;
+}
+
+.invoice-section {
+  margin-top: 25px;
+}
+
+.invoice-section h3 {
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.invoice-table {
+  margin-top: 12px;
+}
+
+.invoice-table th,
+.invoice-table td {
+  vertical-align: middle;
+}
+
+.invoice-summary {
+  width: 360px;
+  max-width: 100%;
+  margin: 25px 0 0 auto;
+}
+
+.invoice-summary div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 7px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.invoice-summary .balance-row {
+  font-size: 18px;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+.invoice-footer {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.invoice-actions {
+  margin-bottom: 15px;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  .invoice-actions {
+    display: none !important;
+  }
+
+  .invoice-page {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .invoice-paper {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .invoice-section,
+  .invoice-summary,
+  .invoice-header {
+    break-inside: avoid;
+  }
+
+  .invoice-table {
+    font-size: 11px;
+  }
+
+  .invoice-table thead {
+    display: table-header-group;
+  }
+
+  .invoice-table tr {
+    break-inside: avoid;
+  }
+
+@media print {
+  /* Hide the entire page */
+  body * {
+    visibility: hidden !important;
+  }
+
+  /* Display only the invoice and its contents */
+  .invoice-paper,
+  .invoice-paper * {
+    visibility: visible !important;
+  }
+
+  /* Position the invoice at the top-left of the printed page */
+  .invoice-paper {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Hide buttons and navigation */
+  .invoice-actions,
+  .sidebar,
+  .navbar,
+  header,
+  nav,
+  footer {
+    display: none !important;
+  }
+
+  /* Preserve table formatting */
+  .invoice-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 11px !important;
+  }
+
+  .invoice-table th,
+  .invoice-table td {
+    border: 1px solid #333 !important;
+    padding: 6px !important;
+    color: black !important;
+  }
+
+  .invoice-table thead {
+    display: table-header-group;
+  }
+
+  .invoice-table tr {
+    break-inside: avoid;
+  }
+
+  .invoice-section,
+  .invoice-summary,
+  .invoice-header {
+    break-inside: avoid;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+}
+
+}
